@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aly & Habiba — Engagement</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500&family=Allura&display=swap');
+:root{--burgundy:#3a0d14;--rose:#8c2b36;--pink:#ecbeb1;--olive:#636b30;--ivory:#f6e4b4}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--burgundy);font-family:Poppins,sans-serif;font-weight:300;overflow-x:hidden}
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 22px 130px;background:var(--burgundy);color:var(--ivory);overflow:hidden}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:44px;background:radial-gradient(circle at 30px 44px,var(--ivory) 29px,transparent 30px) repeat-x;background-size:60px 44px}
+.fh{position:absolute;bottom:-40px;color:var(--rose);opacity:.8;animation:rise linear infinite}
+.fh:nth-child(even){color:var(--pink);opacity:.55}
+@keyframes rise{from{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-55vh) rotate(8deg)}to{transform:translateY(-115vh) rotate(-8deg)}}
+.content{position:relative;z-index:2;max-width:760px}
+.eyebrow{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--pink);margin-bottom:26px}
+.names{font-family:Allura,cursive;font-weight:400;font-size:clamp(78px,17vw,150px);line-height:.9;margin:0;color:var(--ivory)}
+.names .amp{display:block;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.3em;color:var(--pink);margin:2px 0 6px}
+.names .amp:before,.names .amp:after{content:"♥";font-size:.55em;margin:0 14px;color:var(--rose)}
+.subtitle{font-family:"Cormorant Garamond",serif;font-size:clamp(20px,3vw,28px);letter-spacing:7px;text-transform:uppercase;color:var(--pink);margin-top:30px}
+.hero-note{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:23px;margin-top:16px}
+.btn{display:inline-block;background:var(--pink);color:var(--burgundy);padding:16px 40px;margin-top:34px;text-decoration:none;font-size:11px;letter-spacing:3px;text-transform:uppercase;border-radius:50px;border:0;cursor:pointer;font-family:Poppins,sans-serif;font-weight:500;transition:.25s}
+.btn:hover{background:var(--ivory);transform:translateY(-3px)}
+.section{padding:100px 22px;text-align:center}
+.story{background:var(--ivory)}
+.kicker{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--olive);font-weight:500;margin-bottom:14px}
+.script{font-family:Allura,cursive;font-size:clamp(56px,10vw,100px);color:var(--rose);line-height:1.05;margin:0 auto 22px}
+.story p{max-width:640px;margin:0 auto;line-height:1.7;font-family:"Cormorant Garamond",serif;font-size:25px}
+.hearts{margin-top:34px;color:var(--rose);font-size:26px;letter-spacing:12px}
+.hearts span:nth-child(2){color:var(--pink);font-size:34px}
+.details{background:var(--pink)}
+.details:before{content:"";display:block;height:0}
+.details h2,.rsvp h2{font-family:Allura,cursive;font-weight:400;font-size:clamp(60px,10vw,92px);margin:0;color:var(--rose);line-height:1.1}
+.details-intro{font-family:"Cormorant Garamond",serif;font-size:23px;max-width:620px;margin:6px auto 0}
+.grid{max-width:980px;margin:50px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.detail{background:var(--ivory);padding:36px 20px;border-radius:34px}
+.icon{color:var(--rose);font-size:26px;margin-bottom:12px}
+.detail .label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--olive);font-weight:500;margin-bottom:8px}
+.detail .value{font-family:"Cormorant Garamond",serif;font-size:29px;font-weight:500;color:var(--burgundy)}
+.countdown{display:flex;justify-content:center;gap:14px;margin:48px auto 0;flex-wrap:wrap}
+.countdown>div{width:116px;padding:20px 8px;background:var(--burgundy);border-radius:50% 50% 30px 30px/40% 40% 30px 30px;color:var(--ivory)}
+.countdown strong{font-family:"Cormorant Garamond",serif;font-size:44px;font-weight:500;display:block;line-height:1.1}
+.countdown span{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--pink)}
+.details .btn{background:var(--rose);color:var(--ivory)}
+.details .btn:hover{background:var(--burgundy)}
+.rsvp{background:var(--burgundy);padding:100px 22px 120px;text-align:center}
+.rsvp-card{max-width:860px;margin:0 auto;padding:60px;background:var(--ivory);border-radius:44px;position:relative}
+.rsvp-card:before{content:"♥";position:absolute;top:-24px;left:50%;transform:translateX(-50%);width:48px;height:48px;line-height:48px;border-radius:50%;background:var(--rose);color:var(--pink);font-size:22px}
+.rsvp-intro{font-family:"Cormorant Garamond",serif;font-size:24px;max-width:560px;margin:10px auto 18px;line-height:1.45}
+.deadline{display:block;width:max-content;max-width:100%;margin:0 auto 34px;padding:10px 24px;background:var(--rose);color:var(--ivory);font-size:9px;letter-spacing:2.2px;text-transform:uppercase;border-radius:30px}
+form{max-width:580px;margin:0 auto;text-align:left}
+label{display:block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--rose);font-weight:500;margin:18px 0 8px}
+input,textarea{width:100%;padding:15px 18px;border:2px solid var(--pink);background:var(--ivory);color:var(--burgundy);font-family:Poppins,sans-serif;font-size:14px;outline:none;border-radius:18px}
+input:focus,textarea:focus{border-color:var(--rose)}
+.choice{display:flex;gap:10px;margin:12px 0 24px;flex-wrap:wrap}
+.choice label{margin:0;display:flex;align-items:center;gap:8px;border:2px solid var(--pink);padding:14px 18px;text-transform:none;letter-spacing:0;font-size:13px;cursor:pointer;flex:1;min-width:200px;border-radius:50px;color:var(--burgundy);font-weight:400}
+.choice input{width:auto;accent-color:var(--rose)}
+textarea{min-height:100px;resize:vertical}
+.submit-wrap{text-align:center}
+.rsvp .btn{background:var(--rose);color:var(--ivory);padding:17px 46px}
+.rsvp .btn:hover{background:var(--burgundy)}
+#thanks{display:none;text-align:center;margin-top:25px;font-family:"Cormorant Garamond",serif;font-size:26px;color:var(--rose);line-height:1.3}
+.closed{display:none;text-align:center;margin-top:25px;font-family:"Cormorant Garamond",serif;font-size:27px;color:var(--rose)}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.rsvp-card{padding:50px 22px 40px;border-radius:34px}.story p{font-size:22px}.countdown>div{width:44%}.subtitle{letter-spacing:4px}}
+.arch{max-width:520px;margin:50px auto 0;padding:90px 30px 48px;background:var(--ivory);border-radius:260px 260px 40px 40px}
+.arch .label{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--olive);font-weight:500;margin-bottom:6px}
+.bigdate{font-family:Allura,cursive;font-size:clamp(46px,9vw,70px);color:var(--rose);line-height:1.1;margin-bottom:24px}
+.chips{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.pill{background:var(--burgundy);color:var(--ivory);padding:12px 24px;border-radius:50px;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+.countdown>div{border-radius:50%!important;width:108px!important;height:108px;padding:22px 4px!important;background:var(--rose)!important}
+.countdown strong{font-size:36px!important}
+.countdown span{color:var(--ivory)!important}
+@media(max-width:700px){.arch{border-radius:180px 180px 36px 36px;padding-top:70px}.countdown>div{width:96px!important;height:96px}}
+.rings{margin-top:34px}.rings svg{height:auto;max-width:100%}
+</style>
+</head>
+<body>
+<section class="hero">
+  <span class="fh" style="left:6%;font-size:22px;animation-duration:14s;animation-delay:-2s">♥</span><span class="fh" style="left:15%;font-size:14px;animation-duration:11s;animation-delay:-7s">♥</span><span class="fh" style="left:27%;font-size:26px;animation-duration:16s;animation-delay:-4s">♥</span><span class="fh" style="left:38%;font-size:12px;animation-duration:10s;animation-delay:-1s">♥</span><span class="fh" style="left:52%;font-size:18px;animation-duration:13s;animation-delay:-9s">♥</span><span class="fh" style="left:63%;font-size:28px;animation-duration:17s;animation-delay:-5s">♥</span><span class="fh" style="left:74%;font-size:14px;animation-duration:11s;animation-delay:-3s">♥</span><span class="fh" style="left:84%;font-size:24px;animation-duration:15s;animation-delay:-8s">♥</span><span class="fh" style="left:93%;font-size:16px;animation-duration:12s;animation-delay:-6s">♥</span>
+  <div class="content">
+    <div class="eyebrow">A celebration of love &amp; friendship</div>
+    <h1 class="names">Aly <span class="amp">&amp;</span> Habiba</h1>
+    <div class="subtitle">Are Getting Engaged</div>
+    <div class="hero-note">A new chapter, together</div>
+    <a class="btn" href="#rsvp">RSVP</a>
+  </div>
+</section>
+
+<section class="section story">
+  <div class="kicker">Our story</div>
+  <div class="script">We started as best friends</div>
+  <p>Two best friends, a thousand inside jokes, and one very lucky plot twist. And somehow, my best friend became the love of my life.</p>
+  <div class="rings"><svg viewBox="0 0 160 100" width="150" aria-hidden="true">
+<circle cx="58" cy="52" r="30" fill="none" stroke="#8c2b36" stroke-width="7"/>
+<circle cx="102" cy="52" r="30" fill="none" stroke="#ecbeb1" stroke-width="7"/>
+<path d="M84 67 A30 30 0 0 1 74.8 76.9" fill="none" stroke="#8c2b36" stroke-width="7"/>
+</svg></div>
+</section>
+
+<section class="section details">
+  <h2>Save the Date</h2>
+  <p class="details-intro">We would love to have you with us as we celebrate this beautiful beginning.</p>
+  <div class="arch">
+    <div class="label">Saturday</div>
+    <div class="bigdate">5 December 2026</div>
+    <div class="chips"><span class="pill">6:00 PM</span><span class="pill">Novotel Cairo Airport</span></div>
+  </div>
+  <div class="countdown"><div><strong id="days">--</strong><span>Days</span></div><div><strong id="hours">--</strong><span>Hours</span></div><div><strong id="mins">--</strong><span>Minutes</span></div><div><strong id="secs">--</strong><span>Seconds</span></div></div>
+  <a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&amp;query=Novotel%20Cairo%20Airport">View Location</a>
+</section>
+
+<section class="rsvp" id="rsvp">
+  <div class="rsvp-card">
+    <h2>RSVP</h2>
+    <p class="rsvp-intro">We would love to know if you can join us to celebrate this special day.</p>
+    <div class="deadline">Please respond by 15 November 2026</div>
+    <iframe name="rsvpFrame" id="rsvpFrame" style="display:none;"></iframe>
+    <form id="rsvpForm" onsubmit="submitRSVP(event)">
+      <label for="name">Your Name</label><input id="name" required placeholder="Your full name">
+      <label>Will you attend?</label>
+      <div class="choice"><label><input type="radio" name="attend" value="Yes" required> Yes, I'll be there ♡</label><label><input type="radio" name="attend" value="No"> Sorry, can't make it</label></div>
+      <label for="message">Message (optional)</label><textarea id="message" placeholder="Leave us a little note..."></textarea>
+      <div class="submit-wrap"><button class="btn" id="submitBtn" type="submit">Send RSVP</button></div>
+      <div id="thanks"></div><div id="closed" class="closed">RSVPs are now closed. Thank you for thinking of us. 🤍</div>
+    </form>
+  </div>
+</section>
+
+<script>
+const target=new Date("2026-12-05T18:00:00+02:00").getTime();
+function tick(){let d=Math.max(0,target-Date.now());const days=Math.floor(d/86400000);d%=86400000;const hours=Math.floor(d/3600000);d%=3600000;const mins=Math.floor(d/60000);const secs=Math.floor((d%60000)/1000);document.getElementById("days").textContent=String(days);document.getElementById("hours").textContent=String(hours).padStart(2,"0");document.getElementById("mins").textContent=String(mins).padStart(2,"0");document.getElementById("secs").textContent=String(secs).padStart(2,"0")}
+tick();setInterval(tick,1000);
+const RSVP_ENDPOINT="https://script.google.com/macros/s/AKfycbwP_H0HJ15jKiOecBxUDr-bgNlIFBmYYbb91gvwxMxVoqMfqEpm7D5UuIHhgzQ_LFo2/exec";
+const RSVP_DEADLINE=new Date("2026-11-15T23:59:59+02:00").getTime();
+function checkDeadline(){if(Date.now()>RSVP_DEADLINE){document.getElementById("rsvpForm").style.display="none";document.getElementById("closed").style.display="block"}}checkDeadline();
+function submitRSVP(e){e.preventDefault();if(Date.now()>RSVP_DEADLINE){checkDeadline();return}const form=e.target,button=document.getElementById("submitBtn"),thanks=document.getElementById("thanks"),name=document.getElementById("name").value.trim(),attending=form.querySelector('input[name="attend"]:checked');if(!name||!attending)return;button.disabled=true;button.textContent="Sending...";const sender=document.createElement("form");sender.method="POST";sender.action=RSVP_ENDPOINT;sender.target="rsvpFrame";sender.style.display="none";const fields={name:name,attending:attending.value,message:document.getElementById("message").value.trim()};Object.keys(fields).forEach(k=>{const input=document.createElement("input");input.type="hidden";input.name=k;input.value=fields[k];sender.appendChild(input)});document.body.appendChild(sender);sender.submit();setTimeout(()=>{if(attending.value==="Yes"){thanks.textContent="Thank you — we can't wait to celebrate with you. 🤍";thanks.className=""}else{thanks.textContent="We're sorry you won't be able to join us, but thank you for letting us know. You'll be missed. 🤍";thanks.className="no"}thanks.style.display="block";button.style.display="none";form.reset();sender.remove()},700)}
+</script>
+</body>
+</html>
